@@ -1,0 +1,29 @@
+{
+  "name": "bookstore-",
+  "version": "1.0.0",
+  "description": "a book store using Nodejs server expressjs and postgresQl as database postgresQL , is a free and open-source relational database management system emphasizing extensibility and SQL compliance Creating a CDRUD for books and stores.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amina-up/BookStore-.git"
+  },
+  "author": "Amina Abidi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amina-up/BookStore-/issues"
+  },
+  "homepage": "https://github.com/amina-up/BookStore-#readme",
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "cors": "2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "4.17.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0",
+    "randomstring": "^1.2.1",
+    "sequential-ids": "*"
+  }
+}
