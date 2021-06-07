@@ -24,6 +24,7 @@
     "nodemon": "^2.0.7",
     "pg": "^8.6.0",
     "randomstring": "^1.2.1",
-    "sequential-ids": "*"
+    "sequential-ids": "*",
+    "winston": "^3.3.3"
   }
 }

@@ -1,13 +1,19 @@
 const queries= require('../db/queries')
 const connectdb=require('../db/connexion')
-const util=require("../util/utility")
+
+const Logger=require('../services/logger.service')
+
+const logger = new Logger('book.controller')
+
 
 exports.getBookList=async(req,res)=>{
    
     try{
         let bookquery=queries.queryList.GET_BOOK_QUERY;
       let result = await  connectdb.dbquery(bookquery)
-        return res.status(200)
+      logger.info("return book list",result.rows)
+     
+      return res.status(200)
         .send(JSON.stringify(result.rows))
     }catch(err){
 console.log("error:"+err)
@@ -21,7 +27,9 @@ exports.getBookDetails=async(req,res)=>{
     try{
         let bookId=req.params.bookId;
         let bookquery=queries.queryList.GET_BOOK_DETAILS_QUERY;
+        
       let result = await  connectdb.dbquery(bookquery,[bookId])
+      logger.error("return book list",result.rows)
         return res.status(200)
         .send(JSON.stringify(result.rows[0]))
     }catch(err){

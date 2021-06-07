@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router();
-const ctrBook=require('../controller/bookController')
+const ctrBook=require('../controller/book.controller')
 
 router.get("/books",ctrBook.getBookList);
 router.get("/book/details/:bookId",ctrBook.getBookDetails)
